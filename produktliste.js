@@ -14,33 +14,35 @@ function showProduct(product) {
     const template = document.querySelector("#smallProductTemplate").content;
     const copy = template.cloneNode(true);
 
-    // ændre indhold
-    copy.querySelector("p.id").textContent = product.id;
-    copy.querySelector("p.gender").textContent = product.gender;
-    copy.querySelector("p.category").textContent = product.category;
-    copy.querySelector("p.subcategory").textContent = product.subcategory;
-    copy.querySelector("p.articletype").textContent = product.articletype;
-    copy.querySelector("p.productionyear").textContent = product.productionyear;  
-    copy.querySelector("p.productdisplayname").textContent = product.productdisplayname;
-    copy.querySelector("p.price").textContent = product.price;
-    copy.querySelector("p.discount").textContent = product.discount;
-    copy.querySelector("p.brandname").textContent = product.brandname;
-    copy.querySelector("p.soldout").textContent = product.soldout;
 
-    const parent = document.querySelector(".grid_1-1-1-1");
-
-
-   // if(product.soldout){
-        //produktet er udsolgt
-       // copy.querySelector("article").classList.add("soldOut");
-   // }
-    //appende
-   // document.querySelector("main").appendChild(copy);
+// ændre indhold
+copy.querySelector("p.id").textContent = product.id;
+copy.querySelector("p.gender").textContent = product.gender;
+copy.querySelector("p.category").textContent = product.category;
+copy.querySelector("p.subcategory").textContent = product.subcategory;
+copy.querySelector("p.articletype").textContent = product.articletype;
+copy.querySelector("p.productionyear").textContent = product.productionyear;
+copy.querySelector("p.productdisplayname").textContent = product.productdisplayname;
+copy.querySelector("p.price").textContent = product.price;
+copy.querySelector("p.discount").textContent = product.discount;
+copy.querySelector("p.brandname").textContent = product.brandname;
+copy.querySelector("p.soldout").textContent = product.soldout;
+copy.querySelector("img.image1").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
 
 
-
-parent.appendChild(copy);
+if (product.soldout) {
+    //produktet er udsolgt
+    copy.querySelector("article").classList.add("soldOut");
 }
+
+//appende
+//document.querySelector("main").appendChild(copy);
+document.querySelector("main").appendChild(copy);
+
+
+}
+
+
 
 // html:
 // <template id="smallProductTemplate">
