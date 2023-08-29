@@ -32,14 +32,21 @@ copy.querySelector("img.image1").src = `https://kea-alt-del.dk/t7/images/webp/64
 
 if (product.soldout) {
     //produktet er udsolgt
-    copy.querySelector("article").classList.add("soldOut");
+    //copy.querySelector("article").classList.add("soldOut");
+    copy.querySelector(".Udsolgt").classList.remove("hidden");
+
 }
+if (product.discount) {
+    //produktet er udsolgt
+    copy.querySelector(".Rabat").classList.remove("hidden");
+
+}
+
+copy.querySelector(".read-more").setAttribute("href", `produkt.html?id=${product.id}`);
 
 //appende
 //document.querySelector("main").appendChild(copy);
 document.querySelector("main").appendChild(copy);
-
-
 }
 
 

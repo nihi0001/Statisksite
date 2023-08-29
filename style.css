@@ -134,7 +134,7 @@ img {
     text-decoration: line-through;
 }
 
-.BoxUdsolgt {
+.Udsolgt {
     width: 200px;
     /* rammens størrelse */
     height: 20px;
@@ -144,9 +144,9 @@ img {
     /* afstand fra tekst til boks*/
     /*margin: 10px;*/
     background-color: rgb(247, 94, 94);
-    margin: -400px;
+    /*margin: -400px;*/
     /* så er boxen i midten*/
-    margin-left: 300px;
+    /*margin-left: 300px;*/
     /* så er boxen i midten*/
     opacity: 80%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
@@ -164,15 +164,16 @@ img {
     padding: 15px;
     /*margin: 10px;*/
     background-color: rgb(247, 230, 71);
-    margin: -400px;
-    margin-right: -2030px;
+
     opacity: 80%;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: large;
     text-align: center;
     /* så er tesktsen i midten af boksen*/
 }
-
+.hidden {
+    display:none;
+}
 /* PRODUKT */
 /* Billede på produkt*/
 .produktslut {
