@@ -2,12 +2,13 @@ body {
     margin: 65px;
     background-color: #e7e1d9;
     color: #0d5614;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     /*font-family: Georgia, 'Times New Roman', Times, serif;*/
 }
 
-.grid_1-1-1-1 {
+.grid {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     gap: 40px;
     justify-items: center;
     margin-top: 10%;
@@ -101,7 +102,7 @@ body {
 /* PRODUKTLISTE */
 
 img {
-    width: 300px;
+    width: 250px;
     border: 2px solid #0d5614;
 
 }
@@ -124,6 +125,14 @@ img {
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
+.price{
+    font-weight: 700;
+}
+
+.brandname, .gender, .articletype{
+    font-size: small;
+}
+
 .førpris {
     display: flex;
     flex-direction: column;
@@ -135,44 +144,46 @@ img {
 }
 
 .Udsolgt {
-    width: 200px;
+    width: 70px;
     /* rammens størrelse */
-    height: 20px;
+    height: 5px;
     /* rammens størrelse */
     border: 1px solid #0d5614;
     padding: 15px;
-    /* afstand fra tekst til boks*/
-    /*margin: 10px;*/
+    margin-top: -470px;
+    margin-left: 75px;
     background-color: rgb(247, 94, 94);
-    /*margin: -400px;*/
-    /* så er boxen i midten*/
-    /*margin-left: 300px;*/
-    /* så er boxen i midten*/
     opacity: 80%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
-    text-align: center;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: small;
+    font-weight: 900;
     /* så er tesktsen i midten af boksen*/
 
 }
 
 .Rabat {
-    width: 40px;
-    height: 20px;
+    width: 50px;
+    height: 5px;
     /* skal være samme størrelse som udsolgt box */
     border: 1px solid #0d5614;
     padding: 15px;
-    /*margin: 10px;*/
+    margin-top: -500px;
     background-color: rgb(247, 230, 71);
-
     opacity: 80%;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: large;
-    text-align: center;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: small;
+    font-weight: 900;
+
+
     /* så er tesktsen i midten af boksen*/
 }
 .hidden {
     display:none;
+}
+
+
+.productdisplayname{
+    font-size: medium;
 }
 /* PRODUKT */
 /* Billede på produkt*/
