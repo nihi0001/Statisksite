@@ -1,5 +1,8 @@
+const urlParams = new URLSearchParams(window.location.search);
+const category = urlParams.get("category");
+
 //fetche
-fetch("https://kea-alt-del.dk/t7/api/products?limit=100")
+fetch("https://kea-alt-del.dk/t7/api/products?category=" + category)
     .then(res => res.json())
     .then(showProducts)
 
@@ -15,33 +18,32 @@ function showProduct(product) {
     const copy = template.cloneNode(true);
 
 
-// ændre indhold
-copy.querySelector("img.image1").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
-copy.querySelector("h2.productdisplayname").textContent = product.productdisplayname;
-copy.querySelector("p.brandname").textContent = product.brandname;
-copy.querySelector("p.articletype").textContent = product.articletype;
-copy.querySelector("p.price").textContent = product.price;
-copy.querySelector("p.discount").textContent = product.discount;
-copy.querySelector("p.soldout").textContent = product.soldout;
+    // ændre indhold
+    copy.querySelector("img.image1").src = `https://kea-alt-del.dk/t7/images/webp/640/${product.id}.webp`;
+    copy.querySelector("h2.productdisplayname").textContent = product.productdisplayname;
+    copy.querySelector("p.brandname").textContent = product.brandname;
+    copy.querySelector("p.articletype").textContent = product.articletype;
+    copy.querySelector("p.price").textContent = product.price;
 
 
-if (product.soldout) {
-    //produktet er udsolgt
-    //copy.querySelector("article").classList.add("soldOut");
-    copy.querySelector(".Udsolgt").classList.remove("hidden");
+    if (product.soldout) {
+        //produktet er udsolgt
+        //copy.querySelector("article").classList.add("soldOut");
+        copy.querySelector(".Udsolgt").classList.remove("hidden");
 
-}
-if (product.discount) {
-    //produktet er udsolgt
-    copy.querySelector(".Rabat").classList.remove("hidden");
+    }
+    if (product.discount) {
+        //produktet er udsolgt
+        copy.querySelector(".Rabat").classList.remove("hidden");
 
-}
+    }
 
-//copy.querySelector(".read-more").setAttribute("href", `produkt.html?id=${product.id}`);
+    //copy.querySelector(".read-more").setAttribute("href", `produkt.html?id=${product.id}`);
 
-//appende
-//document.querySelector("main").appendChild(copy);
-document.querySelector("main .grid").appendChild(copy);
+    copy.querySelector(".image1").setAttribute("href", `produkt.html?id=${product.id}`);
+    //appende
+    //document.querySelector("main").appendChild(copy);
+    document.querySelector("main .grid").appendChild(copy);
 }
 
 

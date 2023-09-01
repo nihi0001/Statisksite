@@ -20,6 +20,14 @@ body {
     justify-items: center;
 }
 
+.grid1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+    justify-items: center;
+    margin-top: 10%;
+}
+
 /* nav bar */
 
 
@@ -28,8 +36,6 @@ body {
     display: flex;
     align-items: end;
     justify-content: flex-end;
-
-
 }
 
 .navigation a {
@@ -85,7 +91,7 @@ body {
 }
 
 .kategoriknap {
-    border: 1px solid #0d5614;
+   border: 1px solid #0d5614;
     padding: 5px 15px;
     margin: 1.5%; /* afstanden mellem boxene*/
 }
@@ -97,6 +103,20 @@ body {
     line-height: 80px;
     text-decoration: none;
 
+}
+
+.grid1 a{
+    border: 1px solid #0d5614;
+    text-decoration: none;
+    padding: 20px;
+    font-size: large;
+    color: #0d5614;
+    display: list-item;
+}
+
+.grid1 li{
+    list-style: none;
+    
 }
 
 /* PRODUKTLISTE */
@@ -143,6 +163,7 @@ img {
     text-decoration: line-through;
 }
 
+
 .Udsolgt {
     width: 70px;
     /* rammens størrelse */
@@ -150,14 +171,13 @@ img {
     /* rammens størrelse */
     border: 1px solid #0d5614;
     padding: 15px;
-    margin-top: -470px;
-    margin-left: 75px;
     background-color: rgb(247, 94, 94);
     opacity: 80%;
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: small;
     font-weight: 900;
     /* så er tesktsen i midten af boksen*/
+
 
 }
 
@@ -167,7 +187,6 @@ img {
     /* skal være samme størrelse som udsolgt box */
     border: 1px solid #0d5614;
     padding: 15px;
-    margin-top: -500px;
     background-color: rgb(247, 230, 71);
     opacity: 80%;
     font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
